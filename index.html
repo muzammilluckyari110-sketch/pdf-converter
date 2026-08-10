@@ -1224,86 +1224,108 @@ pages:pages
 
 async function convertPdfToWord(){
 
-const result =
-await extractPdfText(
-selectedFiles[0]
-);
+    const file = selectedFiles[0];
 
-const hasText =
-result.pages.some(
-text => text.length > 0
-);
+    if (!file) {
+        throw new Error("Please select a PDF file.");
+    }
 
-if(!hasText){
+    setProgress(10, "Opening PDF...");
 
-throw new Error(
-"This PDF contains no selectable text. Scanned PDFs need OCR."
-);
+    const arrayBuffer = await file.arrayBuffer();
 
-}
+    const pdf = await pdfjsLib.getDocument({
+        data: new Uint8Array(arrayBuffer)
+    }).promise;
 
-setProgress(
-90,
-"Creating Word document..."
-);
+    let allText = "";
 
-const children = [];
+    for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
 
-result.pages.forEach(
-(text,index)=>{
+        setProgress(
+            10 + Math.round((pageNumber / pdf.numPages) * 70),
+            "Reading page " + pageNumber + " of " + pdf.numPages
+        );
 
-children.push(
-new docx.Paragraph({
-text:text || "",
-spacing:{
-after:250
-}
-})
-);
+        const page = await pdf.getPage(pageNumber);
 
-if(
-index <
-result.pages.length - 1
-){
+        const textContent = await page.getTextContent();
 
-children.push(
-new docx.Paragraph({
-text:""
-})
-);
+        let pageText = "";
+        let lastY = null;
 
-}
+        for (const item of textContent.items) {
 
-}
-);
+            const text = item.str || "";
 
-const document =
-new docx.Document({
+            if (!text.trim()) continue;
 
-sections:[
-{
-children:children
-}
-]
+            const y = item.transform
+                ? item.transform[5]
+                : null;
 
-});
+            if (
+                lastY !== null &&
+                y !== null &&
+                Math.abs(y - lastY) > 5
+            ) {
+                pageText += "\n";
+            }
 
-const blob =
-await docx.Packer
-.toBlob(document);
+            pageText += text + " ";
 
-downloadBlob(
-blob,
-removeExtension(
-selectedFiles[0].name
-) +
-".docx"
-);
+            if (y !== null) {
+                lastY = y;
+            }
+        }
 
-finish(
-"Word document downloaded."
-);
+        allText += pageText.trim();
 
+        if (pageNumber < pdf.numPages) {
+            allText += "\n\n";
+        }
+    }
+
+    if (!allText.trim()) {
+        throw new Error(
+            "No selectable text was found in this PDF. If the PDF is scanned, OCR is required."
+        );
+    }
+
+    setProgress(90, "Creating Word document...");
+
+    const paragraphs = allText
+        .split(/\n\s*\n/)
+        .map(text =>
+            new docx.Paragraph({
+                children: [
+                    new docx.TextRun({
+                        text: text.trim(),
+                        size: 22
+                    })
+                ],
+                spacing: {
+                    after: 200
+                }
+            })
+        );
+
+    const document = new docx.Document({
+        sections: [
+            {
+                children: paragraphs
+            }
+        ]
+    });
+
+    const blob = await docx.Packer.toBlob(document);
+
+    const filename =
+        removeExtension(file.name) + ".docx";
+
+    downloadBlob(blob, filename);
+
+    finish("Word document downloaded successfully!");
 }
 
 
