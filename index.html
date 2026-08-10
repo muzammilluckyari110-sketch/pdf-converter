@@ -2,21 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Muzammil PDF - Free Online PDF Tools</title>
+<title>Muzammil PDF Converter</title>
 
-<meta name="description" content="Muzammil PDF - Free online tools to convert, merge, split, rotate and manage PDF files.">
-<meta name="keywords" content="Muzammil PDF, PDF converter, PDF to Word, PDF to PowerPoint, PDF to JPG, JPG to PDF, merge PDF, split PDF">
+<meta name="description" content="Muzammil PDF - free online PDF converter and PDF tools. Convert PDF to Word, PowerPoint, JPG and more.">
 
 <style>
-*{
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
+*{box-sizing:border-box}
 
 body{
     margin:0;
@@ -25,34 +18,18 @@ body{
     color:#172033;
 }
 
-button,
-input,
-select{
-    font:inherit;
-}
-
-button{
-    cursor:pointer;
-}
-
-/* HEADER */
-
 header{
-    position:sticky;
-    top:0;
-    z-index:100;
     background:linear-gradient(135deg,#4f46e5,#7c3aed);
-    color:white;
-    box-shadow:0 5px 25px rgba(0,0,0,.15);
+    color:#fff;
+    padding:18px 20px;
 }
 
 .nav{
-    max-width:1150px;
+    max-width:1100px;
     margin:auto;
-    padding:16px 20px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
 }
 
 .logo{
@@ -64,195 +41,114 @@ header{
     color:#facc15;
 }
 
-.nav-right{
-    display:flex;
-    gap:10px;
+main{
+    max-width:1100px;
+    margin:auto;
+    padding:30px 18px;
 }
-
-.nav-btn{
-    border:1px solid rgba(255,255,255,.3);
-    background:rgba(255,255,255,.12);
-    color:white;
-    padding:9px 15px;
-    border-radius:10px;
-}
-
-/* HERO */
 
 .hero{
-    max-width:950px;
-    margin:55px auto 30px;
-    padding:20px;
     text-align:center;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 14px;
-    border-radius:30px;
-    background:#ede9fe;
-    color:#6d28d9;
-    font-weight:bold;
-    font-size:14px;
+    padding:45px 10px;
 }
 
 .hero h1{
-    margin:18px 0 12px;
-    font-size:clamp(40px,7vw,68px);
-    line-height:1.05;
+    font-size:clamp(38px,7vw,65px);
+    margin:15px 0;
     background:linear-gradient(135deg,#4f46e5,#9333ea);
-    -webkit-background-clip:text;
-    background-clip:text;
     color:transparent;
+    background-clip:text;
+    -webkit-background-clip:text;
 }
 
 .hero p{
-    max-width:720px;
+    max-width:700px;
     margin:auto;
     color:#64748b;
     font-size:18px;
-    line-height:1.7;
+    line-height:1.6;
 }
-
-.hero-btn{
-    margin-top:25px;
-    border:0;
-    padding:15px 25px;
-    border-radius:12px;
-    color:white;
-    font-weight:bold;
-    background:linear-gradient(135deg,#4f46e5,#7c3aed);
-    box-shadow:0 8px 25px rgba(79,70,229,.25);
-}
-
-/* TOOLS */
 
 .tools{
-    max-width:1150px;
-    margin:auto;
-    padding:20px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.section-title h2{
-    font-size:32px;
-    margin:0 0 8px;
-}
-
-.section-title p{
-    color:#64748b;
-}
-
-.tool-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
     gap:18px;
 }
 
 .tool{
-    background:white;
+    background:#fff;
     border:1px solid #e5e7eb;
-    border-radius:20px;
+    border-radius:18px;
     padding:25px 18px;
     text-align:center;
-    box-shadow:0 8px 25px rgba(30,40,100,.06);
-    transition:.2s;
     cursor:pointer;
+    transition:.2s;
+    box-shadow:0 8px 25px rgba(30,40,100,.06);
 }
 
 .tool:hover{
-    transform:translateY(-5px);
+    transform:translateY(-4px);
     border-color:#8b5cf6;
-    box-shadow:0 15px 35px rgba(79,70,229,.14);
 }
 
-.tool-icon{
-    font-size:44px;
+.icon{
+    font-size:42px;
 }
 
 .tool h3{
-    margin:12px 0 7px;
+    margin:10px 0 7px;
 }
 
 .tool p{
-    margin:0;
     color:#64748b;
     font-size:14px;
     line-height:1.5;
 }
 
-/* AD SPACE */
-
-.ad{
-    max-width:900px;
-    min-height:90px;
-    margin:35px auto;
-    padding:20px;
-    border:1px dashed #cbd5e1;
-    border-radius:15px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#94a3b8;
-    font-size:13px;
-}
-
-/* WORKSPACE */
-
 .workspace{
-    max-width:900px;
-    margin:45px auto;
-    padding:20px;
+    max-width:850px;
+    margin:40px auto;
 }
 
 .card{
-    background:white;
-    padding:35px;
-    border-radius:25px;
-    box-shadow:0 15px 50px rgba(30,40,100,.10);
+    background:#fff;
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 15px 50px rgba(30,40,100,.1);
 }
 
 .card h2{
-    margin:0 0 8px;
-    font-size:30px;
+    margin-top:0;
 }
 
-.card-description{
+.description{
     color:#64748b;
     line-height:1.6;
 }
 
-/* DROP ZONE */
-
 .drop{
     display:block;
-    margin:25px 0;
-    padding:45px 20px;
     border:3px dashed #8b5cf6;
-    border-radius:20px;
     background:#faf9ff;
+    border-radius:18px;
+    padding:45px 20px;
     text-align:center;
     cursor:pointer;
-    transition:.2s;
+    margin:25px 0;
 }
 
-.drop:hover,
-.drop.dragging{
-    background:#f0edff;
+.drop:hover{
+    background:#f1efff;
 }
 
 .drop-icon{
-    font-size:55px;
+    font-size:50px;
 }
 
 .drop strong{
     display:block;
-    margin:10px 0 5px;
-    font-size:19px;
+    font-size:18px;
+    margin:10px 0;
 }
 
 .drop small{
@@ -263,202 +159,147 @@ input[type=file]{
     display:none;
 }
 
-/* FILE LIST */
-
-.file-list{
-    margin:20px 0;
-}
-
-.file-item{
+.file{
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:10px;
-    padding:13px;
-    margin:8px 0;
+    align-items:center;
     background:#f8fafc;
-    border-radius:12px;
-}
-
-.file-info{
-    min-width:0;
+    padding:12px;
+    border-radius:10px;
+    margin:8px 0;
+    gap:10px;
 }
 
 .file-name{
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
-    font-weight:bold;
 }
 
-.file-size{
-    color:#64748b;
-    font-size:12px;
-    margin-top:3px;
-}
-
-.remove-btn{
+.remove{
+    border:0;
     background:#fee2e2;
     color:#dc2626;
-    border:0;
-    border-radius:8px;
-    padding:7px 11px;
+    border-radius:7px;
+    padding:7px 10px;
+    cursor:pointer;
 }
-
-/* OPTIONS */
 
 .options{
     display:none;
     background:#f8fafc;
-    border-radius:15px;
     padding:18px;
-    margin:20px 0;
-}
-
-.options label{
-    font-weight:bold;
+    border-radius:12px;
+    margin:18px 0;
 }
 
 .options input,
 .options select{
-    margin-top:10px;
-    padding:11px;
+    padding:10px;
     border:1px solid #cbd5e1;
-    border-radius:9px;
-    background:white;
+    border-radius:8px;
+    margin-top:8px;
 }
 
-.action-row{
+.actions{
     display:flex;
+    gap:10px;
     flex-wrap:wrap;
-    gap:8px;
-    margin-top:15px;
+}
+
+button{
+    font:inherit;
+}
+
+.primary,
+.secondary{
+    padding:13px 20px;
+    border-radius:10px;
+    border:0;
+    cursor:pointer;
+    font-weight:bold;
 }
 
 .primary{
-    border:0;
-    padding:14px 22px;
-    border-radius:12px;
-    color:white;
-    font-weight:bold;
+    color:#fff;
     background:linear-gradient(135deg,#4f46e5,#7c3aed);
 }
 
 .secondary{
-    border:0;
-    padding:14px 22px;
-    border-radius:12px;
     color:#4f46e5;
     background:#eef2ff;
-    font-weight:bold;
 }
 
 .primary:disabled{
-    opacity:.45;
+    opacity:.5;
     cursor:not-allowed;
 }
 
-/* PROGRESS */
-
 .progress{
     display:none;
-    margin-top:25px;
+    margin-top:22px;
 }
 
-.progress-bar{
-    height:12px;
-    overflow:hidden;
+.bar{
+    height:10px;
     background:#e5e7eb;
     border-radius:20px;
+    overflow:hidden;
 }
 
-.progress-fill{
-    height:100%;
+.fill{
     width:0;
+    height:100%;
     background:linear-gradient(90deg,#4f46e5,#a855f7);
     transition:.2s;
 }
 
-.progress-text{
+.progressText{
     text-align:center;
-    margin-top:9px;
     color:#4f46e5;
     font-weight:bold;
+    margin-top:8px;
 }
-
-/* INFO */
 
 .info{
-    max-width:900px;
-    margin:50px auto;
-    padding:20px;
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    margin:40px 0;
 }
 
-.info-box{
-    background:white;
-    border-radius:20px;
-    padding:30px;
+.ad{
+    max-width:850px;
+    min-height:80px;
+    border:1px dashed #cbd5e1;
+    color:#94a3b8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:30px auto;
 }
-
-.info-box h2{
-    margin-top:0;
-}
-
-.info-box li{
-    margin:13px 0;
-    color:#475569;
-}
-
-/* FOOTER */
 
 footer{
-    margin-top:60px;
-    padding:45px 20px;
-    text-align:center;
-    color:#cbd5e1;
     background:#111827;
+    color:#cbd5e1;
+    text-align:center;
+    padding:40px 20px;
 }
 
 footer strong{
-    color:white;
-    font-size:20px;
+    color:#fff;
 }
-
-footer p{
-    margin:8px;
-}
-
-/* MOBILE */
 
 @media(max-width:600px){
 
-    .nav{
-        padding:14px;
-    }
-
-    .logo{
-        font-size:20px;
-    }
-
-    .hero{
-        margin-top:35px;
-    }
-
     .card{
-        padding:22px;
+        padding:20px;
     }
 
-    .drop{
-        padding:35px 15px;
-    }
-
-    .action-row button{
+    .actions button{
         width:100%;
     }
 
-    .file-item{
-        align-items:flex-start;
-    }
 }
 </style>
 </head>
@@ -466,112 +307,67 @@ footer p{
 <body>
 
 <header>
-
 <div class="nav">
-
-<div class="logo">
-⚡ Muzammil<span>PDF</span>
+<div class="logo">⚡ Muzammil<span>PDF</span></div>
+<div>Free PDF Tools</div>
 </div>
-
-<div class="nav-right">
-<button class="nav-btn" onclick="scrollToTools()">
-Tools
-</button>
-</div>
-
-</div>
-
 </header>
-
 
 <main>
 
 <section class="hero">
 
-<div class="badge">
-✨ Simple • Fast • Browser Based
-</div>
-
-<h1>
-Powerful PDF Tools<br>
-Made by Muzammil
-</h1>
+<h1>Muzammil PDF</h1>
 
 <p>
-Convert and manage your PDF files easily.
-No software installation is required for these browser-based tools.
+Simple online tools to convert and manage your PDF files.
 </p>
-
-<button class="hero-btn" onclick="scrollToTools()">
-Explore PDF Tools ↓
-</button>
 
 </section>
 
 
-<section class="tools" id="tools">
+<section class="tools">
 
-<div class="section-title">
-
-<h2>All PDF Tools</h2>
-
-<p>
-Choose a tool to get started.
-</p>
-
-</div>
-
-
-<div class="tool-grid">
-
-<div class="tool" onclick="selectTool('word')">
-<div class="tool-icon">📄</div>
+<div class="tool" onclick="chooseTool('word')">
+<div class="icon">📄</div>
 <h3>PDF to Word</h3>
-<p>Extract text from a PDF and create a Word document.</p>
+<p>Extract PDF text into a Word document.</p>
 </div>
 
-
-<div class="tool" onclick="selectTool('ppt')">
-<div class="tool-icon">📊</div>
+<div class="tool" onclick="chooseTool('ppt')">
+<div class="icon">📊</div>
 <h3>PDF to PowerPoint</h3>
-<p>Create editable PowerPoint slides from PDF text.</p>
+<p>Extract PDF text into PowerPoint slides.</p>
 </div>
 
-
-<div class="tool" onclick="selectTool('jpg')">
-<div class="tool-icon">🖼️</div>
+<div class="tool" onclick="chooseTool('jpg')">
+<div class="icon">🖼️</div>
 <h3>PDF to JPG</h3>
 <p>Convert PDF pages into JPG images.</p>
 </div>
 
-
-<div class="tool" onclick="selectTool('imagepdf')">
-<div class="tool-icon">📑</div>
+<div class="tool" onclick="chooseTool('imagepdf')">
+<div class="icon">📑</div>
 <h3>JPG to PDF</h3>
-<p>Convert JPG or PNG images into one PDF.</p>
+<p>Convert JPG and PNG images to PDF.</p>
 </div>
 
-
-<div class="tool" onclick="selectTool('merge')">
-<div class="tool-icon">🔗</div>
+<div class="tool" onclick="chooseTool('merge')">
+<div class="icon">🔗</div>
 <h3>Merge PDF</h3>
-<p>Combine multiple PDF files into one document.</p>
+<p>Combine multiple PDFs into one.</p>
 </div>
 
-
-<div class="tool" onclick="selectTool('split')">
-<div class="tool-icon">✂️</div>
+<div class="tool" onclick="chooseTool('split')">
+<div class="icon">✂️</div>
 <h3>Split PDF</h3>
 <p>Extract selected pages from a PDF.</p>
 </div>
 
-
-<div class="tool" onclick="selectTool('rotate')">
-<div class="tool-icon">🔄</div>
+<div class="tool" onclick="chooseTool('rotate')">
+<div class="icon">🔄</div>
 <h3>Rotate PDF</h3>
-<p>Rotate all pages in a PDF document.</p>
-</div>
-
+<p>Rotate PDF pages.</p>
 </div>
 
 </section>
@@ -586,52 +382,39 @@ ADVERTISEMENT SPACE
 
 <div class="card">
 
-<h2 id="toolTitle">
-Choose a PDF tool
-</h2>
+<h2 id="title">Choose a tool</h2>
 
-<p class="card-description" id="toolDescription">
-Select one of the tools above to start.
+<p class="description" id="description">
+Select one of the tools above.
 </p>
 
+<label class="drop" for="fileInput">
 
-<label class="drop" id="dropZone" for="fileInput">
+<div class="drop-icon">📤</div>
 
-<div class="drop-icon">
-📤
-</div>
+<strong>Select your file</strong>
 
-<strong>
-Click here to select files
-</strong>
-
-<small>
-or drag and drop your files here
-</small>
+<small>Click here or drag and drop</small>
 
 </label>
 
-
 <input
-type="file"
 id="fileInput"
+type="file"
 >
 
-
-<div class="file-list" id="fileList"></div>
-
+<div id="fileList"></div>
 
 <div class="options" id="options"></div>
 
-
-<div class="action-row">
+<div class="actions">
 
 <button
 class="primary"
-id="processBtn"
+id="process"
 disabled
 >
-Process PDF
+Process
 </button>
 
 <button
@@ -643,23 +426,14 @@ Clear
 
 </div>
 
-
 <div class="progress" id="progress">
 
-<div class="progress-bar">
-
-<div
-class="progress-fill"
-id="progressFill"
-></div>
-
+<div class="bar">
+<div class="fill" id="fill"></div>
 </div>
 
-<div
-class="progress-text"
-id="progressText"
->
-Starting...
+<div class="progressText" id="progressText">
+Working...
 </div>
 
 </div>
@@ -676,25 +450,12 @@ ADVERTISEMENT SPACE
 
 <section class="info">
 
-<div class="info-box">
+<h2>About Muzammil PDF</h2>
 
-<h2>Why use Muzammil PDF?</h2>
-
-<ul>
-
-<li>🔒 Browser-based processing for supported tools</li>
-
-<li>🚀 Fast and simple interface</li>
-
-<li>📱 Works on phones, tablets and computers</li>
-
-<li>💻 No desktop software installation</li>
-
-<li>✨ Easy PDF conversion and management</li>
-
-</ul>
-
-</div>
+<p>
+Muzammil PDF provides simple browser-based PDF tools.
+Files are processed in your browser for the supported operations.
+</p>
 
 </section>
 
@@ -703,17 +464,11 @@ ADVERTISEMENT SPACE
 
 <footer>
 
-<p>
 <strong>⚡ MuzammilPDF</strong>
-</p>
 
-<p>
-Simple PDF tools for everyone.
-</p>
+<p>Simple PDF tools for everyone.</p>
 
-<p>
-© 2026 Muzammil PDF
-</p>
+<p>© 2026 Muzammil PDF</p>
 
 </footer>
 
@@ -728,12 +483,12 @@ Simple PDF tools for everyone.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
 
 
-<!-- DOCX -->
+<!-- DOCX LIBRARY -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/docx/8.5.0/docx.umd.min.js"></script>
+<script src="https://unpkg.com/docx@8.5.0/build/index.js"></script>
 
 
-<!-- POWERPOINT -->
+<!-- PPTX -->
 
 <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
 
@@ -743,76 +498,22 @@ Simple PDF tools for everyone.
 "use strict";
 
 
-/* PDF.JS WORKER */
+/* =========================
+   LIBRARY CHECK
+========================= */
 
 pdfjsLib.GlobalWorkerOptions.workerSrc =
 "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
 
-/* CURRENT TOOL */
+/* =========================
+   VARIABLES
+========================= */
 
 let currentTool = "";
 
 let selectedFiles = [];
 
-
-/* TOOL SETTINGS */
-
-const tools = {
-
-word:{
-title:"📄 PDF to Word",
-description:"Extract selectable text from a PDF and create a Word document.",
-accept:".pdf",
-multiple:false
-},
-
-ppt:{
-title:"📊 PDF to PowerPoint",
-description:"Extract PDF text and create PowerPoint slides.",
-accept:".pdf",
-multiple:false
-},
-
-jpg:{
-title:"🖼️ PDF to JPG",
-description:"Convert each PDF page into a JPG image.",
-accept:".pdf",
-multiple:false
-},
-
-imagepdf:{
-title:"📑 JPG to PDF",
-description:"Convert JPG or PNG images into a single PDF.",
-accept:"image/jpeg,image/png",
-multiple:true
-},
-
-merge:{
-title:"🔗 Merge PDF",
-description:"Combine two or more PDF files into one PDF.",
-accept:".pdf",
-multiple:true
-},
-
-split:{
-title:"✂️ Split PDF",
-description:"Extract selected pages from a PDF.",
-accept:".pdf",
-multiple:false
-},
-
-rotate:{
-title:"🔄 Rotate PDF",
-description:"Rotate all pages in a PDF.",
-accept:".pdf",
-multiple:false
-}
-
-};
-
-
-/* ELEMENTS */
 
 const fileInput =
 document.getElementById("fileInput");
@@ -820,122 +521,177 @@ document.getElementById("fileInput");
 const fileList =
 document.getElementById("fileList");
 
-const processBtn =
-document.getElementById("processBtn");
+const processButton =
+document.getElementById("process");
 
-const optionsBox =
+const options =
 document.getElementById("options");
 
-const dropZone =
-document.getElementById("dropZone");
+const title =
+document.getElementById("title");
 
-const progressBox =
+const description =
+document.getElementById("description");
+
+const progress =
 document.getElementById("progress");
 
-const progressFill =
-document.getElementById("progressFill");
+const fill =
+document.getElementById("fill");
 
 const progressText =
 document.getElementById("progressText");
 
 
-/* SCROLL */
+/* =========================
+   TOOL SELECTION
+========================= */
 
-function scrollToTools(){
+function chooseTool(tool){
 
-document.getElementById("tools")
-.scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-
-/* SELECT TOOL */
-
-function selectTool(name){
-
-currentTool = name;
+currentTool = tool;
 
 selectedFiles = [];
 
-const config = tools[name];
-
-document.getElementById("toolTitle")
-.textContent = config.title;
-
-document.getElementById("toolDescription")
-.textContent = config.description;
-
 fileInput.value = "";
-
-fileInput.accept = config.accept;
-
-fileInput.multiple = config.multiple;
 
 fileList.innerHTML = "";
 
-processBtn.disabled = true;
+processButton.disabled = true;
 
-optionsBox.innerHTML = "";
+options.style.display = "none";
 
-optionsBox.style.display = "none";
+options.innerHTML = "";
 
-progressBox.style.display = "none";
+if(tool === "word"){
 
-if(name === "split"){
+title.textContent =
+"📄 PDF to Word";
 
-optionsBox.style.display = "block";
+description.textContent =
+"Extract selectable PDF text and create a Word document.";
 
-optionsBox.innerHTML = `
+fileInput.accept = ".pdf";
 
-<label>
-Pages to extract
-</label>
+fileInput.multiple = false;
+
+}
+
+if(tool === "ppt"){
+
+title.textContent =
+"📊 PDF to PowerPoint";
+
+description.textContent =
+"Create PowerPoint slides from PDF text.";
+
+fileInput.accept = ".pdf";
+
+fileInput.multiple = false;
+
+}
+
+if(tool === "jpg"){
+
+title.textContent =
+"🖼️ PDF to JPG";
+
+description.textContent =
+"Convert every PDF page into a JPG image.";
+
+fileInput.accept = ".pdf";
+
+fileInput.multiple = false;
+
+}
+
+if(tool === "imagepdf"){
+
+title.textContent =
+"📑 JPG to PDF";
+
+description.textContent =
+"Convert JPG or PNG images into a PDF.";
+
+fileInput.accept =
+"image/jpeg,image/png";
+
+fileInput.multiple = true;
+
+}
+
+if(tool === "merge"){
+
+title.textContent =
+"🔗 Merge PDF";
+
+description.textContent =
+"Combine multiple PDF files into one.";
+
+fileInput.accept = ".pdf";
+
+fileInput.multiple = true;
+
+}
+
+if(tool === "split"){
+
+title.textContent =
+"✂️ Split PDF";
+
+description.textContent =
+"Extract selected pages from a PDF.";
+
+fileInput.accept = ".pdf";
+
+fileInput.multiple = false;
+
+options.style.display = "block";
+
+options.innerHTML = `
+
+<label>Pages to extract</label>
 
 <br>
 
 <input
-type="text"
 id="pageRange"
+type="text"
 placeholder="Example: 1,3,5-7"
 style="width:100%;max-width:400px"
 >
-
-<p style="color:#64748b;font-size:13px">
-Example: 1,3,5-7
-</p>
 
 `;
 
 }
 
+if(tool === "rotate"){
 
-if(name === "rotate"){
+title.textContent =
+"🔄 Rotate PDF";
 
-optionsBox.style.display = "block";
+description.textContent =
+"Rotate all pages in a PDF.";
 
-optionsBox.innerHTML = `
+fileInput.accept = ".pdf";
 
-<label>
-Rotation
-</label>
+fileInput.multiple = false;
+
+options.style.display = "block";
+
+options.innerHTML = `
+
+<label>Rotation</label>
 
 <br>
 
 <select id="rotation">
 
-<option value="90">
-90° clockwise
-</option>
+<option value="90">90°</option>
 
-<option value="180">
-180°
-</option>
+<option value="180">180°</option>
 
-<option value="270">
-270° clockwise
-</option>
+<option value="270">270°</option>
 
 </select>
 
@@ -943,8 +699,8 @@ Rotation
 
 }
 
-
-document.getElementById("workspace")
+document
+.getElementById("workspace")
 .scrollIntoView({
 behavior:"smooth"
 });
@@ -952,7 +708,9 @@ behavior:"smooth"
 }
 
 
-/* FILE SELECT */
+/* =========================
+   FILE INPUT
+========================= */
 
 fileInput.addEventListener(
 "change",
@@ -961,114 +719,70 @@ function(){
 selectedFiles =
 Array.from(this.files);
 
-renderFiles();
+showFiles();
 
 }
 );
 
 
-/* DRAG */
+/* =========================
+   SHOW FILES
+========================= */
 
-dropZone.addEventListener(
-"dragover",
-function(event){
-
-event.preventDefault();
-
-dropZone.classList.add("dragging");
-
-}
-);
-
-
-dropZone.addEventListener(
-"dragleave",
-function(){
-
-dropZone.classList.remove("dragging");
-
-}
-);
-
-
-dropZone.addEventListener(
-"drop",
-function(event){
-
-event.preventDefault();
-
-dropZone.classList.remove("dragging");
-
-selectedFiles =
-Array.from(event.dataTransfer.files);
-
-renderFiles();
-
-}
-);
-
-
-/* RENDER FILES */
-
-function renderFiles(){
+function showFiles(){
 
 fileList.innerHTML = "";
 
 selectedFiles.forEach(
 (file,index)=>{
 
-const row =
+const div =
 document.createElement("div");
 
-row.className = "file-item";
+div.className = "file";
 
-row.innerHTML = `
-
-<div class="file-info">
+div.innerHTML = `
 
 <div class="file-name">
 📄 ${escapeHtml(file.name)}
 </div>
 
-<div class="file-size">
-${formatBytes(file.size)}
-</div>
-
-</div>
-
 <button
-class="remove-btn"
+class="remove"
 onclick="removeFile(${index})"
 >
-✕
+Remove
 </button>
 
 `;
 
-fileList.appendChild(row);
+fileList.appendChild(div);
 
 }
 );
 
-
-processBtn.disabled =
+processButton.disabled =
 selectedFiles.length === 0;
 
 }
 
 
-/* REMOVE FILE */
+/* =========================
+   REMOVE
+========================= */
 
 function removeFile(index){
 
 selectedFiles.splice(index,1);
 
-renderFiles();
+showFiles();
 
 }
 
 
-/* CLEAR */
+/* =========================
+   CLEAR
+========================= */
 
 function clearFiles(){
 
@@ -1078,60 +792,53 @@ fileInput.value = "";
 
 fileList.innerHTML = "";
 
-processBtn.disabled = true;
-
-progressBox.style.display = "none";
+processButton.disabled = true;
 
 }
 
 
-/* PROCESS */
+/* =========================
+   PROCESS
+========================= */
 
-processBtn.addEventListener(
+processButton.addEventListener(
 "click",
 async function(){
 
-if(selectedFiles.length === 0){
+if(!selectedFiles.length){
 
-alert("Please select a file first.");
+alert("Please select a file.");
 
 return;
 
 }
 
-processBtn.disabled = true;
+processButton.disabled = true;
 
-progressBox.style.display = "block";
+progress.style.display = "block";
 
 try{
 
-if(currentTool === "word"){
-await convertPdfToWord();
-}
+if(currentTool === "word")
+await pdfToWord();
 
-else if(currentTool === "ppt"){
-await convertPdfToPowerPoint();
-}
+else if(currentTool === "ppt")
+await pdfToPowerPoint();
 
-else if(currentTool === "jpg"){
-await convertPdfToJpg();
-}
+else if(currentTool === "jpg")
+await pdfToJpg();
 
-else if(currentTool === "imagepdf"){
-await convertImagesToPdf();
-}
+else if(currentTool === "imagepdf")
+await imagesToPdf();
 
-else if(currentTool === "merge"){
-await mergePdfs();
-}
+else if(currentTool === "merge")
+await mergePdf();
 
-else if(currentTool === "split"){
+else if(currentTool === "split")
 await splitPdf();
-}
 
-else if(currentTool === "rotate"){
+else if(currentTool === "rotate")
 await rotatePdf();
-}
 
 }
 catch(error){
@@ -1139,21 +846,24 @@ catch(error){
 console.error(error);
 
 alert(
-"Something went wrong.\n\n" +
-(error.message || "Please try again.")
+"Something went wrong:\n\n" +
+(error && error.message
+? error.message
+: "Please try again.")
 );
 
-processBtn.disabled = false;
+progress.style.display = "none";
 
-progressBox.style.display = "none";
+processButton.disabled = false;
 
 }
 
-}
-);
+});
 
 
-/* READ PDF */
+/* =========================
+   PDF LOADING
+========================= */
 
 async function loadPdf(file){
 
@@ -1162,191 +872,238 @@ await file.arrayBuffer();
 
 return await pdfjsLib
 .getDocument({
-data:buffer
+data:new Uint8Array(buffer)
 })
 .promise;
 
 }
 
 
-/* EXTRACT TEXT */
+/* =========================
+   EXTRACT PDF TEXT
+========================= */
 
-async function extractPdfText(file){
+async function extractText(file){
 
 const pdf =
 await loadPdf(file);
 
-const pages = [];
+let pages = [];
 
 for(
-let pageNumber = 1;
-pageNumber <= pdf.numPages;
-pageNumber++
+let i=1;
+i<=pdf.numPages;
+i++
 ){
 
 setProgress(
-Math.round(
-(pageNumber / pdf.numPages) * 80
-),
-"Reading page " +
-pageNumber +
-" of " +
-pdf.numPages
+Math.round((i/pdf.numPages)*80),
+"Reading page " + i +
+" of " + pdf.numPages
 );
 
 const page =
-await pdf.getPage(pageNumber);
+await pdf.getPage(i);
 
 const content =
 await page.getTextContent();
 
-let text = "";
+let lines = [];
 
-content.items.forEach(
-item=>{
-text += item.str + " ";
-}
+let currentLine = "";
+
+let lastY = null;
+
+for(
+const item of content.items
+){
+
+const text =
+item.str || "";
+
+if(!text.trim())
+continue;
+
+const y =
+item.transform
+? item.transform[5]
+: null;
+
+if(
+lastY !== null &&
+y !== null &&
+Math.abs(y-lastY)>4
+){
+
+if(currentLine.trim())
+lines.push(
+currentLine.trim()
 );
 
-pages.push(text.trim());
+currentLine = "";
 
 }
 
-return {
-pdf:pdf,
-pages:pages
-};
+currentLine +=
+text + " ";
+
+if(y !== null)
+lastY = y;
 
 }
 
-
-/* PDF TO WORD */
-
-async function convertPdfToWord(){
-
-    const file = selectedFiles[0];
-
-    if (!file) {
-        throw new Error("Please select a PDF file.");
-    }
-
-    setProgress(10, "Opening PDF...");
-
-    const arrayBuffer = await file.arrayBuffer();
-
-    const pdf = await pdfjsLib.getDocument({
-        data: new Uint8Array(arrayBuffer)
-    }).promise;
-
-    let allText = "";
-
-    for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
-
-        setProgress(
-            10 + Math.round((pageNumber / pdf.numPages) * 70),
-            "Reading page " + pageNumber + " of " + pdf.numPages
-        );
-
-        const page = await pdf.getPage(pageNumber);
-
-        const textContent = await page.getTextContent();
-
-        let pageText = "";
-        let lastY = null;
-
-        for (const item of textContent.items) {
-
-            const text = item.str || "";
-
-            if (!text.trim()) continue;
-
-            const y = item.transform
-                ? item.transform[5]
-                : null;
-
-            if (
-                lastY !== null &&
-                y !== null &&
-                Math.abs(y - lastY) > 5
-            ) {
-                pageText += "\n";
-            }
-
-            pageText += text + " ";
-
-            if (y !== null) {
-                lastY = y;
-            }
-        }
-
-        allText += pageText.trim();
-
-        if (pageNumber < pdf.numPages) {
-            allText += "\n\n";
-        }
-    }
-
-    if (!allText.trim()) {
-        throw new Error(
-            "No selectable text was found in this PDF. If the PDF is scanned, OCR is required."
-        );
-    }
-
-    setProgress(90, "Creating Word document...");
-
-    const paragraphs = allText
-        .split(/\n\s*\n/)
-        .map(text =>
-            new docx.Paragraph({
-                children: [
-                    new docx.TextRun({
-                        text: text.trim(),
-                        size: 22
-                    })
-                ],
-                spacing: {
-                    after: 200
-                }
-            })
-        );
-
-    const document = new docx.Document({
-        sections: [
-            {
-                children: paragraphs
-            }
-        ]
-    });
-
-    const blob = await docx.Packer.toBlob(document);
-
-    const filename =
-        removeExtension(file.name) + ".docx";
-
-    downloadBlob(blob, filename);
-
-    finish("Word document downloaded successfully!");
-}
-
-
-/* PDF TO POWERPOINT */
-
-async function convertPdfToPowerPoint(){
-
-const result =
-await extractPdfText(
-selectedFiles[0]
+if(currentLine.trim())
+lines.push(
+currentLine.trim()
 );
 
-const hasText =
-result.pages.some(
-text => text.length > 0
+pages.push(
+lines.join("\n")
 );
 
-if(!hasText){
+}
+
+return pages;
+
+}
+
+
+/* =========================
+   PDF TO WORD
+========================= */
+
+async function pdfToWord(){
+
+const file =
+selectedFiles[0];
+
+setProgress(
+10,
+"Reading PDF..."
+);
+
+const pages =
+await extractText(file);
+
+const text =
+pages.join("\n\n");
+
+if(!text.trim()){
 
 throw new Error(
-"This PDF contains no selectable text. Scanned PDFs need OCR."
+"This PDF has no selectable text. A scanned PDF requires OCR."
+);
+
+}
+
+
+/*
+DOCX library exposes Document,
+Paragraph, TextRun and Packer.
+*/
+
+if(
+typeof docx === "undefined"
+){
+
+throw new Error(
+"The Word library could not be loaded. Refresh the page and try again."
+);
+
+}
+
+setProgress(
+90,
+"Creating Word document..."
+);
+
+const paragraphs =
+text
+.split(/\n/)
+.map(
+line =>
+new docx.Paragraph({
+
+children:[
+new docx.TextRun({
+text:line
+})
+],
+
+spacing:{
+after:100
+}
+
+})
+);
+
+
+const document =
+new docx.Document({
+
+sections:[
+{
+properties:{},
+
+children:
+paragraphs
+
+}
+]
+
+});
+
+
+const blob =
+await docx.Packer.toBlob(
+document
+);
+
+
+downloadBlob(
+blob,
+removeExtension(file.name)
++
+".docx"
+);
+
+finish(
+"Word document downloaded!"
+);
+
+}
+
+
+/* =========================
+   PDF TO POWERPOINT
+========================= */
+
+async function pdfToPowerPoint(){
+
+if(
+typeof PptxGenJS === "undefined"
+){
+
+throw new Error(
+"The PowerPoint library could not be loaded."
+);
+
+}
+
+const file =
+selectedFiles[0];
+
+const pages =
+await extractText(file);
+
+if(
+!pages.some(
+p=>p.trim()
+)
+){
+
+throw new Error(
+"This PDF has no selectable text."
 );
 
 }
@@ -1359,36 +1116,25 @@ setProgress(
 const ppt =
 new PptxGenJS();
 
-ppt.layout = "LAYOUT_WIDE";
+ppt.layout =
+"LAYOUT_WIDE";
 
 ppt.author =
 "Muzammil PDF";
 
-ppt.subject =
-"PDF conversion";
-
-ppt.title =
-removeExtension(
-selectedFiles[0].name
-);
-
-
-result.pages.forEach(
+pages.forEach(
 (text,index)=>{
 
 const slide =
 ppt.addSlide();
 
-slide.background = {
-color:"FFFFFF"
-};
-
 slide.addText(
-"Page " + (index + 1),
+"Page " +
+(index+1),
 {
 x:.6,
 y:.3,
-w:11.5,
+w:11,
 h:.5,
 fontSize:22,
 bold:true,
@@ -1397,15 +1143,15 @@ color:"4F46E5"
 );
 
 slide.addText(
-text || "No selectable text found.",
+text ||
+"No text found.",
 {
-x:.65,
+x:.6,
 y:1,
 w:12,
-h:5.7,
+h:5.5,
 fontSize:16,
 color:"222222",
-breakLine:false,
 fit:"shrink"
 }
 );
@@ -1413,25 +1159,25 @@ fit:"shrink"
 }
 );
 
-
 await ppt.writeFile({
 fileName:
-removeExtension(
-selectedFiles[0].name
-) +
+removeExtension(file.name)
++
 ".pptx"
 });
 
 finish(
-"PowerPoint presentation downloaded."
+"PowerPoint downloaded!"
 );
 
 }
 
 
-/* PDF TO JPG */
+/* =========================
+   PDF TO JPG
+========================= */
 
-async function convertPdfToJpg(){
+async function pdfToJpg(){
 
 const pdf =
 await loadPdf(
@@ -1439,25 +1185,19 @@ selectedFiles[0]
 );
 
 for(
-let pageNumber=1;
-pageNumber<=pdf.numPages;
-pageNumber++
+let i=1;
+i<=pdf.numPages;
+i++
 ){
 
 setProgress(
-Math.round(
-(pageNumber/pdf.numPages)*90
-),
+Math.round((i/pdf.numPages)*90),
 "Converting page " +
-pageNumber +
-" of " +
-pdf.numPages
+i
 );
 
 const page =
-await pdf.getPage(
-pageNumber
-);
+await pdf.getPage(i);
 
 const viewport =
 page.getViewport({
@@ -1465,9 +1205,7 @@ scale:1.5
 });
 
 const canvas =
-document.createElement(
-"canvas"
-);
+document.createElement("canvas");
 
 canvas.width =
 viewport.width;
@@ -1476,9 +1214,7 @@ canvas.height =
 viewport.height;
 
 const context =
-canvas.getContext(
-"2d"
-);
+canvas.getContext("2d");
 
 await page.render({
 
@@ -1494,7 +1230,7 @@ resolve =>
 canvas.toBlob(
 resolve,
 "image/jpeg",
-0.92
+.92
 )
 );
 
@@ -1502,26 +1238,29 @@ downloadBlob(
 blob,
 removeExtension(
 selectedFiles[0].name
-) +
+)
++
 "-page-" +
-pageNumber +
+i +
 ".jpg"
 );
 
 }
 
 finish(
-"JPG images downloaded."
+"JPG files downloaded!"
 );
 
 }
 
 
-/* IMAGES TO PDF */
+/* =========================
+   IMAGES TO PDF
+========================= */
 
-async function convertImagesToPdf(){
+async function imagesToPdf(){
 
-const pdf =
+const output =
 await PDFLib.PDFDocument.create();
 
 for(
@@ -1529,16 +1268,6 @@ let i=0;
 i<selectedFiles.length;
 i++
 ){
-
-setProgress(
-Math.round(
-(i/selectedFiles.length)*90
-),
-"Adding image " +
-(i+1) +
-" of " +
-selectedFiles.length
-);
 
 const file =
 selectedFiles[i];
@@ -1556,34 +1285,22 @@ file.type ===
 ){
 
 image =
-await pdf.embedPng(
-bytes
-);
-
-}
-else if(
-file.type ===
-"image/jpeg" ||
-file.type ===
-"image/jpg"
-){
-
-image =
-await pdf.embedJpg(
+await output.embedPng(
 bytes
 );
 
 }
 else{
 
-throw new Error(
-"Only JPG and PNG images are supported."
+image =
+await output.embedJpg(
+bytes
 );
 
 }
 
 const page =
-pdf.addPage([
+output.addPage([
 image.width,
 image.height
 ]);
@@ -1601,7 +1318,7 @@ height:image.height
 }
 
 const bytes =
-await pdf.save();
+await output.save();
 
 downloadBlob(
 new Blob(
@@ -1614,27 +1331,30 @@ type:"application/pdf"
 );
 
 finish(
-"PDF created successfully."
+"PDF created!"
 );
 
 }
 
 
-/* MERGE */
+/* =========================
+   MERGE PDF
+========================= */
 
-async function mergePdfs(){
+async function mergePdf(){
 
-if(selectedFiles.length < 2){
+if(
+selectedFiles.length < 2
+){
 
 throw new Error(
-"Please select at least two PDF files."
+"Select at least two PDF files."
 );
 
 }
 
-const merged =
-await PDFLib.PDFDocument
-.create();
+const output =
+await PDFLib.PDFDocument.create();
 
 for(
 let i=0;
@@ -1643,37 +1363,30 @@ i++
 ){
 
 setProgress(
-Math.round(
-(i/selectedFiles.length)*90
-),
+Math.round((i/selectedFiles.length)*90),
 "Merging PDF " +
-(i+1) +
-" of " +
-selectedFiles.length
+(i+1)
 );
 
 const source =
-await PDFLib.PDFDocument
-.load(
-await selectedFiles[i]
-.arrayBuffer()
+await PDFLib.PDFDocument.load(
+await selectedFiles[i].arrayBuffer()
 );
 
 const pages =
-await merged.copyPages(
+await output.copyPages(
 source,
 source.getPageIndices()
 );
 
 pages.forEach(
-page =>
-merged.addPage(page)
+page=>output.addPage(page)
 );
 
 }
 
 const bytes =
-await merged.save();
+await output.save();
 
 downloadBlob(
 new Blob(
@@ -1686,13 +1399,15 @@ type:"application/pdf"
 );
 
 finish(
-"PDFs merged successfully."
+"PDFs merged!"
 );
 
 }
 
 
-/* SPLIT */
+/* =========================
+   SPLIT PDF
+========================= */
 
 async function splitPdf(){
 
@@ -1704,47 +1419,35 @@ document.getElementById(
 if(!input){
 
 throw new Error(
-"Please enter the page numbers."
+"Enter page numbers."
 );
 
 }
 
-const pages =
-parsePageRange(input);
-
-if(pages.length === 0){
-
-throw new Error(
-"Invalid page range."
-);
-
-}
+const pageNumbers =
+parseRange(input);
 
 const source =
-await PDFLib.PDFDocument
-.load(
-await selectedFiles[0]
-.arrayBuffer()
+await PDFLib.PDFDocument.load(
+await selectedFiles[0].arrayBuffer()
 );
 
 const total =
 source.getPageCount();
 
 for(
-const page of pages
+const page of pageNumbers
 ){
 
 if(
-page < 1 ||
-page > total
+page<1 ||
+page>total
 ){
 
 throw new Error(
 "Page " +
 page +
-" does not exist. This PDF has " +
-total +
-" pages."
+" does not exist."
 );
 
 }
@@ -1752,20 +1455,18 @@ total +
 }
 
 const output =
-await PDFLib.PDFDocument
-.create();
+await PDFLib.PDFDocument.create();
 
 const copied =
 await output.copyPages(
 source,
-pages.map(
-page => page - 1
+pageNumbers.map(
+p=>p-1
 )
 );
 
 copied.forEach(
-page =>
-output.addPage(page)
+page=>output.addPage(page)
 );
 
 const bytes =
@@ -1778,20 +1479,19 @@ new Blob(
 type:"application/pdf"
 }
 ),
-removeExtension(
-selectedFiles[0].name
-) +
-"-split.pdf"
+"muzammil-split.pdf"
 );
 
 finish(
-"Selected pages extracted."
+"PDF split successfully!"
 );
 
 }
 
 
-/* ROTATE */
+/* =========================
+   ROTATE
+========================= */
 
 async function rotatePdf(){
 
@@ -1803,15 +1503,12 @@ document.getElementById(
 );
 
 const source =
-await PDFLib.PDFDocument
-.load(
-await selectedFiles[0]
-.arrayBuffer()
+await PDFLib.PDFDocument.load(
+await selectedFiles[0].arrayBuffer()
 );
 
 const output =
-await PDFLib.PDFDocument
-.create();
+await PDFLib.PDFDocument.create();
 
 const pages =
 await output.copyPages(
@@ -1843,88 +1540,63 @@ new Blob(
 type:"application/pdf"
 }
 ),
-removeExtension(
-selectedFiles[0].name
-) +
-"-rotated.pdf"
+"muzammil-rotated.pdf"
 );
 
 finish(
-"Rotated PDF downloaded."
+"PDF rotated successfully!"
 );
 
 }
 
 
-/* PAGE RANGE */
+/* =========================
+   PAGE RANGE
+========================= */
 
-function parsePageRange(value){
+function parseRange(value){
 
-const result = [];
+let result = [];
 
-const parts =
-value.split(",");
-
-parts.forEach(
+value
+.split(",")
+.forEach(
 part=>{
 
-part =
-part.trim();
+part=part.trim();
 
 if(
 part.includes("-")
 ){
 
-const range =
-part.split("-");
-
-const start =
-Number(range[0]);
-
-const end =
-Number(range[1]);
-
-if(
-Number.isInteger(start) &&
-Number.isInteger(end)
-){
-
-const low =
-Math.min(start,end);
-
-const high =
-Math.max(start,end);
+const [a,b] =
+part
+.split("-")
+.map(Number);
 
 for(
-let i=low;
-i<=high;
+let i=Math.min(a,b);
+i<=Math.max(a,b);
 i++
 ){
 
-if(
-!result.includes(i)
-){
-
+if(!result.includes(i))
 result.push(i);
-
-}
-
-}
 
 }
 
 }
 else{
 
-const number =
+const n =
 Number(part);
 
 if(
-Number.isInteger(number) &&
-!result.includes(number)
+Number.isInteger(n) &&
+!result.includes(n)
 ){
 
-result.push(number);
+result.push(n);
 
 }
 
@@ -1940,14 +1612,16 @@ return result.sort(
 }
 
 
-/* PROGRESS */
+/* =========================
+   PROGRESS
+========================= */
 
 function setProgress(
 percent,
 message
 ){
 
-progressFill.style.width =
+fill.style.width =
 percent + "%";
 
 progressText.textContent =
@@ -1956,7 +1630,9 @@ message;
 }
 
 
-/* FINISH */
+/* =========================
+   FINISH
+========================= */
 
 function finish(message){
 
@@ -1966,66 +1642,17 @@ message
 );
 
 setTimeout(
-()=>{
+function(){
 
-progressBox.style.display =
+progress.style.display =
 "none";
 
-progressFill.style.width =
+fill.style.width =
 "0%";
 
-processBtn.disabled =
+processButton.disabled =
 false;
 
-},
-2500
-);
-
-}
-
-
-/* DOWNLOAD */
-
-function downloadBlob(
-blob,
-filename
-){
-
-if(!blob){
-
-throw new Error(
-"Could not create the output file."
-);
-
-}
-
-const url =
-URL.createObjectURL(
-blob
-);
-
-const link =
-document.createElement(
-"a"
-);
-
-link.href = url;
-
-link.download = filename;
-
-document.body.appendChild(
-link
-);
-
-link.click();
-
-link.remove();
-
-setTimeout(
-()=>{
-URL.revokeObjectURL(
-url
-);
 },
 2000
 );
@@ -2033,7 +1660,44 @@ url
 }
 
 
-/* HELPERS */
+/* =========================
+   DOWNLOAD
+========================= */
+
+function downloadBlob(
+blob,
+filename
+){
+
+const url =
+URL.createObjectURL(blob);
+
+const a =
+document.createElement("a");
+
+a.href=url;
+
+a.download=filename;
+
+document.body.appendChild(a);
+
+a.click();
+
+a.remove();
+
+setTimeout(
+function(){
+URL.revokeObjectURL(url);
+},
+2000
+);
+
+}
+
+
+/* =========================
+   HELPERS
+========================= */
 
 function removeExtension(
 filename
@@ -2047,43 +1711,9 @@ return filename.replace(
 }
 
 
-function formatBytes(
-bytes
-){
+function escapeHtml(text){
 
-if(bytes === 0){
-return "0 Bytes";
-}
-
-const units = [
-"Bytes",
-"KB",
-"MB",
-"GB"
-];
-
-const index =
-Math.floor(
-Math.log(bytes) /
-Math.log(1024)
-);
-
-return (
-bytes /
-Math.pow(1024,index)
-).toFixed(2)
-+
-" " +
-units[index];
-
-}
-
-
-function escapeHtml(
-text
-){
-
-return text
+return String(text)
 .replace(/&/g,"&amp;")
 .replace(/</g,"&lt;")
 .replace(/>/g,"&gt;")
@@ -2093,9 +1723,9 @@ return text
 }
 
 
-/* DEFAULT TOOL */
+/* DEFAULT */
 
-selectTool("word");
+chooseTool("word");
 
 </script>
 
