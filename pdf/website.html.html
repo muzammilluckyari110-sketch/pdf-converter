@@ -1,0 +1,3235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PDF Muzammil — Free Online PDF Tools</title>
+
+<meta
+  name="description"
+  content="Free online PDF tools. Convert, merge, split, rotate, compress and extract PDF pages directly in your browser."
+>
+
+<style>
+
+:root{
+  --primary:#635bff;
+  --primary-dark:#5048e5;
+  --secondary:#8b5cf6;
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --text:#171827;
+  --muted:#70758a;
+  --border:#e7e8ef;
+  --success:#16a34a;
+  --danger:#ef4444;
+  --shadow:0 20px 60px rgba(34,38,80,.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(16px);
+
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  width:min(1180px,92%);
+  margin:auto;
+
+  height:72px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:-.6px;
+}
+
+.logo-icon{
+  width:40px;
+  height:40px;
+
+  border-radius:12px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:white;
+  font-size:20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+  box-shadow:
+    0 8px 25px rgba(99,91,255,.3);
+}
+
+.logo span{
+  color:var(--primary);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#555a6e;
+  font-size:14px;
+  font-weight:600;
+}
+
+.nav-links a:hover{
+  color:var(--primary);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+
+  padding:90px 20px 70px;
+
+  text-align:center;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(99,91,255,.14),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(139,92,246,.12),
+      transparent 35%
+    ),
+    #fff;
+}
+
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:#f0efff;
+  color:#574fe8;
+
+  font-size:13px;
+  font-weight:800;
+
+  margin-bottom:22px;
+}
+
+.hero h1{
+  max-width:850px;
+  margin:auto;
+
+  font-size:
+    clamp(42px,7vw,76px);
+
+  line-height:.98;
+
+  letter-spacing:-4px;
+
+  font-weight:950;
+}
+
+.gradient-text{
+  background:
+    linear-gradient(
+      90deg,
+      var(--primary),
+      var(--secondary),
+      #ec4899
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  max-width:690px;
+  margin:25px auto 0;
+
+  font-size:18px;
+  line-height:1.7;
+
+  color:var(--muted);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main{
+  width:min(1180px,92%);
+  margin:-25px auto 90px;
+
+  position:relative;
+  z-index:5;
+}
+
+/* =========================
+   TOOL BOX
+========================= */
+
+.tool-box{
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:25px;
+
+  box-shadow:var(--shadow);
+
+  padding:25px;
+}
+
+.tool-tabs{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:10px;
+
+  margin-bottom:25px;
+}
+
+.tool-tab{
+  border:1px solid var(--border);
+
+  background:#fafbfe;
+
+  color:#5d6275;
+
+  padding:13px 10px;
+
+  border-radius:12px;
+
+  cursor:pointer;
+
+  font-size:13px;
+
+  font-weight:800;
+
+  transition:.2s;
+}
+
+.tool-tab:hover{
+  border-color:#c9c6ff;
+  color:var(--primary);
+}
+
+.tool-tab.active{
+  color:white;
+
+  border-color:transparent;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+  box-shadow:
+    0 8px 20px rgba(99,91,255,.22);
+}
+
+/* =========================
+   DROP ZONE
+========================= */
+
+.drop-zone{
+  border:2px dashed #cfd2df;
+
+  border-radius:20px;
+
+  padding:55px 20px;
+
+  text-align:center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fcfcff,
+      #f9faff
+    );
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.drop-zone:hover,
+.drop-zone.dragover{
+  border-color:var(--primary);
+
+  background:#f5f4ff;
+
+  transform:translateY(-2px);
+}
+
+.upload-circle{
+  width:75px;
+  height:75px;
+
+  margin:0 auto 18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ebe9ff,
+      #f1eaff
+    );
+
+  color:var(--primary);
+
+  font-size:34px;
+}
+
+.drop-zone h2{
+  font-size:23px;
+  margin-bottom:8px;
+}
+
+.drop-zone p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.choose-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:13px 23px;
+
+  border-radius:11px;
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+  font-weight:800;
+  font-size:14px;
+}
+
+input[type=file]{
+  display:none;
+}
+
+/* =========================
+   FILE LIST
+========================= */
+
+.file-list{
+  display:none;
+  margin-top:20px;
+}
+
+.file-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:15px;
+
+  padding:13px;
+
+  border:1px solid var(--border);
+
+  border-radius:14px;
+
+  background:#fafbfe;
+
+  margin-bottom:9px;
+}
+
+.file-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  min-width:0;
+}
+
+.file-icon{
+  width:45px;
+  height:45px;
+
+  border-radius:12px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#eeeaff;
+  color:var(--primary);
+
+  font-size:12px;
+  font-weight:900;
+
+  flex-shrink:0;
+}
+
+.file-name{
+  font-weight:800;
+  font-size:14px;
+
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.file-size{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:3px;
+}
+
+.remove{
+  width:35px;
+  height:35px;
+
+  border:0;
+
+  border-radius:9px;
+
+  background:#fff0f0;
+
+  color:var(--danger);
+
+  cursor:pointer;
+
+  font-size:18px;
+}
+
+/* =========================
+   OPTIONS
+========================= */
+
+.options{
+  display:none;
+
+  margin-top:20px;
+
+  padding:20px;
+
+  border:1px solid var(--border);
+
+  border-radius:15px;
+
+  background:#fbfbfd;
+}
+
+.option-row{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.option-row label{
+  font-size:14px;
+  font-weight:800;
+}
+
+select,
+input[type=number],
+input[type=text]{
+  padding:10px 12px;
+
+  border:1px solid #dfe1ea;
+
+  border-radius:9px;
+
+  background:white;
+
+  outline:none;
+}
+
+select:focus,
+input:focus{
+  border-color:var(--primary);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.convert-btn{
+  display:none;
+
+  width:100%;
+
+  border:0;
+
+  margin-top:20px;
+
+  padding:16px;
+
+  border-radius:12px;
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+  font-size:16px;
+
+  font-weight:900;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 12px 25px rgba(99,91,255,.2);
+}
+
+.convert-btn:hover{
+  transform:translateY(-1px);
+}
+
+.convert-btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-wrap{
+  display:none;
+
+  margin-top:20px;
+}
+
+.progress-text{
+  display:flex;
+  justify-content:space-between;
+
+  font-size:13px;
+  color:var(--muted);
+
+  margin-bottom:8px;
+}
+
+.progress{
+  height:9px;
+
+  background:#eceef5;
+
+  border-radius:99px;
+
+  overflow:hidden;
+}
+
+.progress-bar{
+  width:0%;
+  height:100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+  transition:.2s;
+}
+
+/* =========================
+   RESULTS
+========================= */
+
+.results{
+  margin-top:20px;
+}
+
+.result{
+  padding:18px;
+
+  background:#f8fafc;
+
+  border:1px solid var(--border);
+
+  border-radius:15px;
+
+  margin-top:10px;
+}
+
+.result-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  font-weight:900;
+
+  margin-bottom:12px;
+}
+
+.preview{
+  width:100%;
+  max-height:420px;
+
+  object-fit:contain;
+
+  background:white;
+
+  border-radius:10px;
+
+  margin-bottom:12px;
+}
+
+.download{
+  display:block;
+
+  text-align:center;
+
+  padding:12px;
+
+  border-radius:10px;
+
+  text-decoration:none;
+
+  color:white;
+
+  background:var(--success);
+
+  font-weight:800;
+}
+
+/* =========================
+   TOOL GRID
+========================= */
+
+.section{
+  padding-top:80px;
+}
+
+.section-heading{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.section-heading h2{
+  font-size:38px;
+  letter-spacing:-1.5px;
+}
+
+.section-heading p{
+  color:var(--muted);
+  margin-top:10px;
+}
+
+.tools-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:16px;
+}
+
+.tool-card{
+  padding:22px;
+
+  background:white;
+
+  border:1px solid var(--border);
+
+  border-radius:18px;
+
+  transition:.25s;
+
+  cursor:pointer;
+}
+
+.tool-card:hover{
+  transform:translateY(-5px);
+
+  box-shadow:
+    0 18px 40px rgba(30,35,70,.08);
+
+  border-color:#d5d2ff;
+}
+
+.tool-icon{
+  width:48px;
+  height:48px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:14px;
+
+  background:#f0efff;
+
+  font-size:23px;
+
+  margin-bottom:15px;
+}
+
+.tool-card h3{
+  font-size:16px;
+  margin-bottom:7px;
+}
+
+.tool-card p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+
+  margin-top:70px;
+}
+
+.feature{
+  padding:28px;
+
+  background:white;
+
+  border:1px solid var(--border);
+
+  border-radius:18px;
+
+  text-align:center;
+}
+
+.feature-icon{
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.feature h3{
+  margin-bottom:8px;
+}
+
+.feature p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  margin-top:80px;
+
+  padding:45px 20px;
+
+  color:#aeb2c2;
+
+  background:#171827;
+
+  text-align:center;
+}
+
+.footer-logo{
+  color:white;
+  font-size:20px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+footer p{
+  font-size:13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+  .tools-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .tool-tabs{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:600px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero{
+    padding:60px 15px 70px;
+  }
+
+  .hero h1{
+    letter-spacing:-2.5px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .main{
+    width:94%;
+  }
+
+  .tool-box{
+    padding:15px;
+  }
+
+  .tools-grid,
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .drop-zone{
+    padding:40px 15px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+  <div class="nav">
+
+    <div class="logo">
+
+      <div class="logo-icon">
+        P
+      </div>
+
+      PDF<span>Nova</span>
+
+    </div>
+
+
+    <div class="nav-links">
+
+      <a href="#tools">
+        Tools
+      </a>
+
+      <a href="#features">
+        Features
+      </a>
+
+      <a href="#converter">
+        Converter
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="hero-badge">
+    ✨ Free online PDF toolbox
+  </div>
+
+  <h1>
+
+    Everything you need
+    <br>
+
+    for your
+
+    <span class="gradient-text">
+      PDFs.
+    </span>
+
+  </h1>
+
+  <p>
+
+    Convert, merge, split, rotate and extract
+    PDF pages with a clean, fast and easy-to-use
+    online toolbox.
+
+  </p>
+
+</section>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="main" id="converter">
+
+
+  <div class="tool-box">
+
+
+    <!-- TOOL TABS -->
+
+    <div class="tool-tabs">
+
+      <button
+        class="tool-tab active"
+        data-tool="image-pdf"
+      >
+        🖼️ Images → PDF
+      </button>
+
+      <button
+        class="tool-tab"
+        data-tool="pdf-image"
+      >
+        📄 PDF → Image
+      </button>
+
+      <button
+        class="tool-tab"
+        data-tool="merge"
+      >
+        🔗 Merge PDF
+      </button>
+
+      <button
+        class="tool-tab"
+        data-tool="split"
+      >
+        ✂️ Split PDF
+      </button>
+
+      <button
+        class="tool-tab"
+        data-tool="rotate"
+      >
+        🔄 Rotate PDF
+      </button>
+
+      <button
+        class="tool-tab"
+        data-tool="extract"
+      >
+        📑 Extract Pages
+      </button>
+
+      <button
+        class="tool-tab"
+        data-tool="compress"
+      >
+        🗜️ Compress PDF
+      </button>
+
+      <button
+        class="tool-tab"
+        data-tool="pdf-jpg"
+      >
+        📸 PDF → JPG
+      </button>
+
+    </div>
+
+
+
+    <!-- DROP ZONE -->
+
+    <div
+      class="drop-zone"
+      id="dropZone"
+    >
+
+      <div class="upload-circle">
+        ↑
+      </div>
+
+      <h2 id="dropTitle">
+        Convert images into PDF
+      </h2>
+
+      <p id="dropDescription">
+        Drag & drop your JPG, PNG or WebP images here
+      </p>
+
+      <label
+        for="fileInput"
+        class="choose-btn"
+      >
+        Choose Files
+      </label>
+
+      <input
+        type="file"
+        id="fileInput"
+      >
+
+    </div>
+
+
+
+    <!-- FILE LIST -->
+
+    <div
+      class="file-list"
+      id="fileList"
+    ></div>
+
+
+
+    <!-- OPTIONS -->
+
+    <div
+      class="options"
+      id="options"
+    >
+
+      <div class="option-row">
+
+        <label>
+          Page size
+        </label>
+
+        <select id="pageSize">
+
+          <option value="a4">
+            A4
+          </option>
+
+          <option value="letter">
+            Letter
+          </option>
+
+        </select>
+
+
+        <label>
+          Quality
+        </label>
+
+        <select id="quality">
+
+          <option value="1">
+            High
+          </option>
+
+          <option value=".75">
+            Medium
+          </option>
+
+          <option value=".5">
+            Low
+          </option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- CONVERT -->
+
+    <button
+      class="convert-btn"
+      id="convertBtn"
+    >
+      Convert Now →
+    </button>
+
+
+
+    <!-- PROGRESS -->
+
+    <div
+      class="progress-wrap"
+      id="progressWrap"
+    >
+
+      <div class="progress-text">
+
+        <span id="progressText">
+          Preparing...
+        </span>
+
+        <span id="progressPercent">
+          0%
+        </span>
+
+      </div>
+
+      <div class="progress">
+
+        <div
+          class="progress-bar"
+          id="progressBar"
+        ></div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- RESULTS -->
+
+    <div
+      class="results"
+      id="results"
+    ></div>
+
+
+  </div>
+
+
+
+  <!-- =========================
+       ALL TOOLS
+  ========================= -->
+
+  <section
+    class="section"
+    id="tools"
+  >
+
+    <div class="section-heading">
+
+      <h2>
+        Powerful PDF tools
+      </h2>
+
+      <p>
+        Everything in one simple place.
+      </p>
+
+    </div>
+
+
+    <div class="tools-grid">
+
+
+      <div
+        class="tool-card"
+        data-select-tool="image-pdf"
+      >
+
+        <div class="tool-icon">
+          🖼️
+        </div>
+
+        <h3>
+          JPG to PDF
+        </h3>
+
+        <p>
+          Turn multiple images into one PDF document.
+        </p>
+
+      </div>
+
+
+      <div
+        class="tool-card"
+        data-select-tool="pdf-image"
+      >
+
+        <div class="tool-icon">
+          📄
+        </div>
+
+        <h3>
+          PDF to PNG
+        </h3>
+
+        <p>
+          Convert every PDF page into a high-quality image.
+        </p>
+
+      </div>
+
+
+      <div
+        class="tool-card"
+        data-select-tool="pdf-jpg"
+      >
+
+        <div class="tool-icon">
+          📸
+        </div>
+
+        <h3>
+          PDF to JPG
+        </h3>
+
+        <p>
+          Turn PDF pages into downloadable JPG images.
+        </p>
+
+      </div>
+
+
+      <div
+        class="tool-card"
+        data-select-tool="merge"
+      >
+
+        <div class="tool-icon">
+          🔗
+        </div>
+
+        <h3>
+          Merge PDF
+        </h3>
+
+        <p>
+          Combine multiple PDF documents into one file.
+        </p>
+
+      </div>
+
+
+      <div
+        class="tool-card"
+        data-select-tool="split"
+      >
+
+        <div class="tool-icon">
+          ✂️
+        </div>
+
+        <h3>
+          Split PDF
+        </h3>
+
+        <p>
+          Split a PDF into separate files, one page at a time.
+        </p>
+
+      </div>
+
+
+      <div
+        class="tool-card"
+        data-select-tool="rotate"
+      >
+
+        <div class="tool-icon">
+          🔄
+        </div>
+
+        <h3>
+          Rotate PDF
+        </h3>
+
+        <p>
+          Rotate every page by 90 degrees.
+        </p>
+
+      </div>
+
+
+      <div
+        class="tool-card"
+        data-select-tool="extract"
+      >
+
+        <div class="tool-icon">
+          📑
+        </div>
+
+        <h3>
+          Extract Pages
+        </h3>
+
+        <p>
+          Choose specific pages and create a new PDF.
+        </p>
+
+      </div>
+
+
+      <div
+        class="tool-card"
+        data-select-tool="compress"
+      >
+
+        <div class="tool-icon">
+          🗜️
+        </div>
+
+        <h3>
+          Compress PDF
+        </h3>
+
+        <p>
+          Reduce PDF size by rebuilding pages as optimized images.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FEATURES
+  ========================= -->
+
+  <section
+    class="features"
+    id="features"
+  >
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🔒
+      </div>
+
+      <h3>
+        Browser Processing
+      </h3>
+
+      <p>
+        These tools process files locally in your browser.
+        Files are not sent to your website server.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        ⚡
+      </div>
+
+      <h3>
+        Simple & Fast
+      </h3>
+
+      <p>
+        No account is required for the basic tools.
+        Upload your file and start working immediately.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        📱
+      </div>
+
+      <h3>
+        Works Everywhere
+      </h3>
+
+      <p>
+        Responsive design works on phones,
+        tablets and desktop computers.
+      </p>
+
+    </div>
+
+
+  </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="footer-logo">
+    PDFNova
+  </div>
+
+  <p>
+    Simple PDF tools for everyone.
+  </p>
+
+</footer>
+
+
+
+<!-- PDF.JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+
+
+<!-- PDF-LIB -->
+
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+
+
+<!-- JSPDF -->
+
+<script src="https://cdn.jsdelivr.net/npm/jspdf@4.2.1/dist/jspdf.umd.min.js"></script>
+
+
+
+<script>
+
+
+/* ==================================
+   LIBRARIES
+================================== */
+
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
+
+const {
+  PDFDocument,
+  degrees
+} = PDFLib;
+
+const {
+  jsPDF
+} = window.jspdf;
+
+
+
+/* ==================================
+   ELEMENTS
+================================== */
+
+const dropZone =
+  document.getElementById("dropZone");
+
+const fileInput =
+  document.getElementById("fileInput");
+
+const fileList =
+  document.getElementById("fileList");
+
+const convertBtn =
+  document.getElementById("convertBtn");
+
+const results =
+  document.getElementById("results");
+
+const options =
+  document.getElementById("options");
+
+const progressWrap =
+  document.getElementById("progressWrap");
+
+const progressBar =
+  document.getElementById("progressBar");
+
+const progressText =
+  document.getElementById("progressText");
+
+const progressPercent =
+  document.getElementById("progressPercent");
+
+const dropTitle =
+  document.getElementById("dropTitle");
+
+const dropDescription =
+  document.getElementById("dropDescription");
+
+
+
+/* ==================================
+   STATE
+================================== */
+
+let currentTool =
+  "image-pdf";
+
+let files = [];
+
+
+
+/* ==================================
+   TOOL INFORMATION
+================================== */
+
+const toolInfo = {
+
+  "image-pdf": {
+
+    title:"Convert images into PDF",
+
+    description:
+      "Drag & drop your JPG, PNG or WebP images here",
+
+    accept:
+      "image/jpeg,image/png,image/webp",
+
+    multiple:true
+
+  },
+
+
+  "pdf-image": {
+
+    title:"Convert PDF to PNG",
+
+    description:
+      "Upload a PDF and turn every page into a PNG image",
+
+    accept:
+      "application/pdf",
+
+    multiple:false
+
+  },
+
+
+  "pdf-jpg": {
+
+    title:"Convert PDF to JPG",
+
+    description:
+      "Upload a PDF and turn every page into a JPG image",
+
+    accept:
+      "application/pdf",
+
+    multiple:false
+
+  },
+
+
+  "merge": {
+
+    title:"Merge multiple PDFs",
+
+    description:
+      "Select two or more PDF files to combine them",
+
+    accept:
+      "application/pdf",
+
+    multiple:true
+
+  },
+
+
+  "split": {
+
+    title:"Split PDF",
+
+    description:
+      "Upload a PDF to create a separate PDF for every page",
+
+    accept:
+      "application/pdf",
+
+    multiple:false
+
+  },
+
+
+  "rotate": {
+
+    title:"Rotate PDF pages",
+
+    description:
+      "Upload a PDF and rotate every page 90 degrees",
+
+    accept:
+      "application/pdf",
+
+    multiple:false
+
+  },
+
+
+  "extract": {
+
+    title:"Extract PDF pages",
+
+    description:
+      "Upload a PDF and enter the pages you want to keep",
+
+    accept:
+      "application/pdf",
+
+    multiple:false
+
+  },
+
+
+  "compress": {
+
+    title:"Compress PDF",
+
+    description:
+      "Rebuild PDF pages at a lower image quality",
+
+    accept:
+      "application/pdf",
+
+    multiple:false
+
+  }
+
+};
+
+
+
+/* ==================================
+   SELECT TOOL
+================================== */
+
+function selectTool(tool){
+
+  currentTool = tool;
+
+  files = [];
+
+  fileInput.value = "";
+
+  fileList.innerHTML = "";
+
+  results.innerHTML = "";
+
+  convertBtn.style.display = "none";
+
+  options.style.display = "none";
+
+  progressWrap.style.display = "none";
+
+
+  const info =
+    toolInfo[tool];
+
+
+  dropTitle.textContent =
+    info.title;
+
+
+  dropDescription.textContent =
+    info.description;
+
+
+  fileInput.accept =
+    info.accept;
+
+
+  fileInput.multiple =
+    info.multiple;
+
+
+  document
+    .querySelectorAll(".tool-tab")
+    .forEach(button => {
+
+      button.classList.toggle(
+        "active",
+        button.dataset.tool === tool
+      );
+
+    });
+
+
+  if(
+    tool === "image-pdf" ||
+    tool === "compress"
+  ){
+
+    options.style.display =
+      "block";
+
+  }
+
+}
+
+
+
+/* ==================================
+   TABS
+================================== */
+
+document
+  .querySelectorAll(".tool-tab")
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        selectTool(
+          button.dataset.tool
+        );
+
+      }
+    );
+
+  });
+
+
+
+/* ==================================
+   TOOL CARDS
+================================== */
+
+document
+  .querySelectorAll("[data-select-tool]")
+  .forEach(card => {
+
+    card.addEventListener(
+      "click",
+      () => {
+
+        selectTool(
+          card.dataset.selectTool
+        );
+
+        document
+          .getElementById("converter")
+          .scrollIntoView({
+            behavior:"smooth"
+          });
+
+      }
+    );
+
+  });
+
+
+
+/* ==================================
+   FILE PICKER
+================================== */
+
+fileInput.addEventListener(
+  "change",
+  () => {
+
+    files =
+      Array.from(fileInput.files);
+
+    showFiles();
+
+  }
+);
+
+
+
+/* ==================================
+   DRAG DROP
+================================== */
+
+dropZone.addEventListener(
+  "dragover",
+  event => {
+
+    event.preventDefault();
+
+    dropZone.classList.add(
+      "dragover"
+    );
+
+  }
+);
+
+
+dropZone.addEventListener(
+  "dragleave",
+  () => {
+
+    dropZone.classList.remove(
+      "dragover"
+    );
+
+  }
+);
+
+
+dropZone.addEventListener(
+  "drop",
+  event => {
+
+    event.preventDefault();
+
+    dropZone.classList.remove(
+      "dragover"
+    );
+
+
+    let dropped =
+      Array.from(
+        event.dataTransfer.files
+      );
+
+
+    const info =
+      toolInfo[currentTool];
+
+
+    dropped =
+      dropped.filter(file => {
+
+        if(
+          currentTool === "image-pdf"
+        ){
+
+          return file.type.startsWith(
+            "image/"
+          );
+
+        }
+
+        return file.type ===
+          "application/pdf";
+
+      });
+
+
+    if(!info.multiple){
+
+      dropped =
+        dropped.slice(0,1);
+
+    }
+
+
+    files =
+      dropped;
+
+
+    showFiles();
+
+  }
+);
+
+
+
+/* ==================================
+   SHOW FILES
+================================== */
+
+function showFiles(){
+
+  fileList.innerHTML = "";
+
+  results.innerHTML = "";
+
+
+  if(!files.length){
+
+    fileList.style.display =
+      "none";
+
+    convertBtn.style.display =
+      "none";
+
+    return;
+
+  }
+
+
+  fileList.style.display =
+    "block";
+
+  convertBtn.style.display =
+    "block";
+
+
+  files.forEach(
+    (file,index) => {
+
+      const item =
+        document.createElement(
+          "div"
+        );
+
+      item.className =
+        "file-item";
+
+
+      item.innerHTML = `
+
+        <div class="file-left">
+
+          <div class="file-icon">
+            ${file.type ===
+              "application/pdf"
+              ? "PDF"
+              : "IMG"}
+          </div>
+
+          <div>
+
+            <div class="file-name">
+              ${escapeHTML(
+                file.name
+              )}
+            </div>
+
+            <div class="file-size">
+              ${formatBytes(
+                file.size
+              )}
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="remove"
+          data-index="${index}"
+        >
+          ×
+        </button>
+
+      `;
+
+
+      fileList.appendChild(item);
+
+    }
+  );
+
+
+  document
+    .querySelectorAll(".remove")
+    .forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          files.splice(
+            Number(
+              button.dataset.index
+            ),
+            1
+          );
+
+          showFiles();
+
+        }
+      );
+
+    });
+
+}
+
+
+
+/* ==================================
+   CONVERT BUTTON
+================================== */
+
+convertBtn.addEventListener(
+  "click",
+  async () => {
+
+    if(!files.length){
+
+      alert(
+        "Please select a file first."
+      );
+
+      return;
+
+    }
+
+
+    convertBtn.disabled = true;
+
+    results.innerHTML = "";
+
+    progressWrap.style.display =
+      "block";
+
+
+    try{
+
+      switch(currentTool){
+
+        case "image-pdf":
+
+          await imagesToPDF();
+
+          break;
+
+
+        case "pdf-image":
+
+          await pdfToImage(
+            "png"
+          );
+
+          break;
+
+
+        case "pdf-jpg":
+
+          await pdfToImage(
+            "jpg"
+          );
+
+          break;
+
+
+        case "merge":
+
+          await mergePDFs();
+
+          break;
+
+
+        case "split":
+
+          await splitPDF();
+
+          break;
+
+
+        case "rotate":
+
+          await rotatePDF();
+
+          break;
+
+
+        case "extract":
+
+          await extractPages();
+
+          break;
+
+
+        case "compress":
+
+          await compressPDF();
+
+          break;
+
+      }
+
+    }
+    catch(error){
+
+      console.error(error);
+
+      alert(
+        "Something went wrong. Please try another file."
+      );
+
+    }
+
+
+    convertBtn.disabled = false;
+
+  }
+);
+
+
+
+/* ==================================
+   IMAGES → PDF
+================================== */
+
+async function imagesToPDF(){
+
+  setProgress(
+    5,
+    "Preparing images..."
+  );
+
+
+  const size =
+    document.getElementById(
+      "pageSize"
+    ).value;
+
+
+  const quality =
+    Number(
+      document.getElementById(
+        "quality"
+      ).value
+    );
+
+
+  const format =
+    size === "a4"
+      ? [210,297]
+      : [216,279];
+
+
+  const pdf =
+    new jsPDF({
+      orientation:"portrait",
+      unit:"mm",
+      format:"a4"
+    });
+
+
+  for(
+    let i=0;
+    i<files.length;
+    i++
+  ){
+
+    const image =
+      await loadImage(
+        files[i]
+      );
+
+
+    if(i>0){
+
+      pdf.addPage(
+        "a4",
+        "portrait"
+      );
+
+    }
+
+
+    const ratio =
+      Math.min(
+        (format[0]-20) /
+          image.width,
+
+        (format[1]-20) /
+          image.height
+      );
+
+
+    const width =
+      image.width * ratio;
+
+    const height =
+      image.height * ratio;
+
+
+    const x =
+      (format[0]-width)/2;
+
+    const y =
+      (format[1]-height)/2;
+
+
+    pdf.addImage(
+      image.data,
+      image.format,
+      x,
+      y,
+      width,
+      height,
+      undefined,
+      "FAST"
+    );
+
+
+    setProgress(
+      10 +
+      ((i+1)/files.length)*80,
+
+      `Adding image ${i+1} of ${files.length}...`
+    );
+
+  }
+
+
+  const blob =
+    pdf.output("blob");
+
+
+  showDownload(
+    blob,
+    "images-to-pdf.pdf",
+    "Your PDF is ready!"
+  );
+
+
+  setProgress(
+    100,
+    "Complete!"
+  );
+
+}
+
+
+
+/* ==================================
+   PDF → IMAGE
+================================== */
+
+async function pdfToImage(format){
+
+  const file =
+    files[0];
+
+
+  const buffer =
+    await file.arrayBuffer();
+
+
+  const pdf =
+    await pdfjsLib.getDocument({
+      data:new Uint8Array(buffer)
+    }).promise;
+
+
+  for(
+    let i=1;
+    i<=pdf.numPages;
+    i++
+  ){
+
+    const page =
+      await pdf.getPage(i);
+
+
+    const viewport =
+      page.getViewport({
+        scale:2
+      });
+
+
+    const canvas =
+      document.createElement(
+        "canvas"
+      );
+
+
+    canvas.width =
+      viewport.width;
+
+    canvas.height =
+      viewport.height;
+
+
+    const ctx =
+      canvas.getContext(
+        "2d"
+      );
+
+
+    await page.render({
+
+      canvasContext:ctx,
+
+      viewport
+
+    }).promise;
+
+
+    const mime =
+      format === "png"
+        ? "image/png"
+        : "image/jpeg";
+
+
+    const extension =
+      format === "png"
+        ? "png"
+        : "jpg";
+
+
+    const blob =
+      await new Promise(
+        resolve =>
+          canvas.toBlob(
+            resolve,
+            mime,
+            .92
+          )
+      );
+
+
+    const url =
+      URL.createObjectURL(
+        blob
+      );
+
+
+    addResult(
+
+      `Page ${i}`,
+
+      `
+
+      <img
+        class="preview"
+        src="${url}"
+        alt="PDF page"
+      >
+
+      <a
+        class="download"
+        href="${url}"
+        download="page-${i}.${extension}"
+      >
+        Download Page ${i}
+      </a>
+
+      `
+
+    );
+
+
+    setProgress(
+      (i/pdf.numPages)*100,
+      `Converting page ${i} of ${pdf.numPages}...`
+    );
+
+  }
+
+}
+
+
+
+/* ==================================
+   MERGE PDF
+================================== */
+
+async function mergePDFs(){
+
+  if(files.length < 2){
+
+    alert(
+      "Select at least two PDF files."
+    );
+
+    return;
+
+  }
+
+
+  const merged =
+    await PDFDocument.create();
+
+
+  for(
+    let i=0;
+    i<files.length;
+    i++
+  ){
+
+    const bytes =
+      await files[i].arrayBuffer();
+
+
+    const source =
+      await PDFDocument.load(
+        bytes
+      );
+
+
+    const pages =
+      await merged.copyPages(
+        source,
+        source.getPageIndices()
+      );
+
+
+    pages.forEach(
+      page =>
+        merged.addPage(page)
+    );
+
+
+    setProgress(
+      ((i+1)/files.length)*90,
+      `Merging PDF ${i+1}...`
+    );
+
+  }
+
+
+  const bytes =
+    await merged.save();
+
+
+  const blob =
+    new Blob(
+      [bytes],
+      {
+        type:"application/pdf"
+      }
+    );
+
+
+  showDownload(
+    blob,
+    "merged.pdf",
+    "PDFs merged successfully!"
+  );
+
+
+  setProgress(
+    100,
+    "Complete!"
+  );
+
+}
+
+
+
+/* ==================================
+   SPLIT PDF
+================================== */
+
+async function splitPDF(){
+
+  const bytes =
+    await files[0].arrayBuffer();
+
+
+  const source =
+    await PDFDocument.load(
+      bytes
+    );
+
+
+  const total =
+    source.getPageCount();
+
+
+  for(
+    let i=0;
+    i<total;
+    i++
+  ){
+
+    const output =
+      await PDFDocument.create();
+
+
+    const [
+      page
+    ] =
+      await output.copyPages(
+        source,
+        [i]
+      );
+
+
+    output.addPage(
+      page
+    );
+
+
+    const pdfBytes =
+      await output.save();
+
+
+    const blob =
+      new Blob(
+        [pdfBytes],
+        {
+          type:
+            "application/pdf"
+        }
+      );
+
+
+    const url =
+      URL.createObjectURL(
+        blob
+      );
+
+
+    addResult(
+
+      `Page ${i+1}`,
+
+      `
+
+      <a
+        class="download"
+        href="${url}"
+        download="page-${i+1}.pdf"
+      >
+        Download Page ${i+1}
+      </a>
+
+      `
+
+    );
+
+
+    setProgress(
+      ((i+1)/total)*100,
+      `Splitting page ${i+1} of ${total}...`
+    );
+
+  }
+
+}
+
+
+
+/* ==================================
+   ROTATE PDF
+================================== */
+
+async function rotatePDF(){
+
+  const bytes =
+    await files[0].arrayBuffer();
+
+
+  const pdf =
+    await PDFDocument.load(
+      bytes
+    );
+
+
+  const pages =
+    pdf.getPages();
+
+
+  pages.forEach(
+    page => {
+
+      const current =
+        page.getRotation().angle;
+
+
+      page.setRotation(
+        degrees(
+          current + 90
+        )
+      );
+
+    }
+  );
+
+
+  const output =
+    await pdf.save();
+
+
+  const blob =
+    new Blob(
+      [output],
+      {
+        type:
+          "application/pdf"
+      }
+    );
+
+
+  showDownload(
+    blob,
+    "rotated.pdf",
+    "PDF rotated successfully!"
+  );
+
+
+  setProgress(
+    100,
+    "Complete!"
+  );
+
+}
+
+
+
+/* ==================================
+   EXTRACT PAGES
+================================== */
+
+async function extractPages(){
+
+  const input =
+    prompt(
+      "Enter pages to extract.\nExample: 1,3,5 or 1-4"
+    );
+
+
+  if(!input)
+    return;
+
+
+  const pageNumbers =
+    parsePages(
+      input
+    );
+
+
+  const sourceBytes =
+    await files[0].arrayBuffer();
+
+
+  const source =
+    await PDFDocument.load(
+      sourceBytes
+    );
+
+
+  const total =
+    source.getPageCount();
+
+
+  const validPages =
+    pageNumbers.filter(
+      n =>
+        n >= 1 &&
+        n <= total
+    );
+
+
+  if(!validPages.length){
+
+    alert(
+      "No valid pages were selected."
+    );
+
+    return;
+
+  }
+
+
+  const output =
+    await PDFDocument.create();
+
+
+  const copied =
+    await output.copyPages(
+      source,
+      validPages.map(
+        n => n-1
+      )
+    );
+
+
+  copied.forEach(
+    page =>
+      output.addPage(page)
+  );
+
+
+  const bytes =
+    await output.save();
+
+
+  const blob =
+    new Blob(
+      [bytes],
+      {
+        type:
+          "application/pdf"
+      }
+    );
+
+
+  showDownload(
+    blob,
+    "extracted-pages.pdf",
+    "Pages extracted successfully!"
+  );
+
+
+  setProgress(
+    100,
+    "Complete!"
+  );
+
+}
+
+
+
+/* ==================================
+   COMPRESS PDF
+================================== */
+
+async function compressPDF(){
+
+  const file =
+    files[0];
+
+
+  const buffer =
+    await file.arrayBuffer();
+
+
+  const pdf =
+    await pdfjsLib.getDocument({
+      data:new Uint8Array(buffer)
+    }).promise;
+
+
+  const quality =
+    Number(
+      document.getElementById(
+        "quality"
+      ).value
+    );
+
+
+  const output =
+    new jsPDF({
+      unit:"mm",
+      format:"a4"
+    });
+
+
+  for(
+    let i=1;
+    i<=pdf.numPages;
+    i++
+  ){
+
+    const page =
+      await pdf.getPage(i);
+
+
+    const viewport =
+      page.getViewport({
+        scale:1.3
+      });
+
+
+    const canvas =
+      document.createElement(
+        "canvas"
+      );
+
+
+    canvas.width =
+      viewport.width;
+
+    canvas.height =
+      viewport.height;
+
+
+    const ctx =
+      canvas.getContext(
+        "2d"
+      );
+
+
+    await page.render({
+
+      canvasContext:ctx,
+
+      viewport
+
+    }).promise;
+
+
+    const image =
+      canvas.toDataURL(
+        "image/jpeg",
+        quality
+      );
+
+
+    if(i>1){
+
+      output.addPage();
+
+    }
+
+
+    output.addImage(
+      image,
+      "JPEG",
+      0,
+      0,
+      210,
+      297
+    );
+
+
+    setProgress(
+      (i/pdf.numPages)*100,
+      `Compressing page ${i} of ${pdf.numPages}...`
+    );
+
+  }
+
+
+  const blob =
+    output.output(
+      "blob"
+    );
+
+
+  showDownload(
+    blob,
+    "compressed.pdf",
+    "Compressed PDF is ready!"
+  );
+
+
+  setProgress(
+    100,
+    "Complete!"
+  );
+
+}
+
+
+
+/* ==================================
+   LOAD IMAGE
+================================== */
+
+function loadImage(file){
+
+  return new Promise(
+    (resolve,reject)=>{
+
+      const reader =
+        new FileReader();
+
+
+      reader.onload =
+        () => {
+
+          const image =
+            new Image();
+
+
+          image.onload =
+            () => {
+
+              resolve({
+
+                data:
+                  reader.result,
+
+                width:
+                  image.width,
+
+                height:
+                  image.height,
+
+                format:
+                  file.type ===
+                  "image/png"
+
+                  ? "PNG"
+
+                  : "JPEG"
+
+              });
+
+            };
+
+
+          image.onerror =
+            reject;
+
+
+          image.src =
+            reader.result;
+
+        };
+
+
+      reader.onerror =
+        reject;
+
+
+      reader.readAsDataURL(
+        file
+      );
+
+    }
+  );
+
+}
+
+
+
+/* ==================================
+   RESULT
+================================== */
+
+function showDownload(
+  blob,
+  filename,
+  title
+){
+
+  const url =
+    URL.createObjectURL(
+      blob
+    );
+
+
+  addResult(
+
+    title,
+
+    `
+
+    <div
+      style="
+        padding:10px 0;
+        color:#70758a;
+        font-size:14px;
+      "
+    >
+      Your file has been created successfully.
+    </div>
+
+    <a
+      class="download"
+      href="${url}"
+      download="${filename}"
+    >
+      ⬇ Download ${filename}
+    </a>
+
+    `
+
+  );
+
+}
+
+
+
+/* ==================================
+   ADD RESULT
+================================== */
+
+function addResult(
+  title,
+  content
+){
+
+  const result =
+    document.createElement(
+      "div"
+    );
+
+
+  result.className =
+    "result";
+
+
+  result.innerHTML = `
+
+    <div class="result-title">
+      ✓ ${title}
+    </div>
+
+    ${content}
+
+  `;
+
+
+  results.appendChild(
+    result
+  );
+
+}
+
+
+
+/* ==================================
+   PROGRESS
+================================== */
+
+function setProgress(
+  percent,
+  text
+){
+
+  percent =
+    Math.max(
+      0,
+      Math.min(
+        100,
+        Math.round(percent)
+      )
+    );
+
+
+  progressBar.style.width =
+    percent + "%";
+
+
+  progressPercent.textContent =
+    percent + "%";
+
+
+  progressText.textContent =
+    text;
+
+}
+
+
+
+/* ==================================
+   PAGE PARSER
+================================== */
+
+function parsePages(input){
+
+  const pages =
+    new Set();
+
+
+  input
+    .split(",")
+    .forEach(part => {
+
+      part =
+        part.trim();
+
+
+      if(part.includes("-")){
+
+        const [
+          start,
+          end
+        ] =
+          part
+            .split("-")
+            .map(Number);
+
+
+        if(
+          Number.isInteger(start) &&
+          Number.isInteger(end)
+        ){
+
+          for(
+            let i=start;
+            i<=end;
+            i++
+          ){
+
+            pages.add(i);
+
+          }
+
+        }
+
+      }
+      else{
+
+        const number =
+          Number(part);
+
+
+        if(
+          Number.isInteger(
+            number
+          )
+        ){
+
+          pages.add(
+            number
+          );
+
+        }
+
+      }
+
+    });
+
+
+  return Array.from(
+    pages
+  ).sort(
+    (a,b) =>
+      a-b
+  );
+
+}
+
+
+
+/* ==================================
+   HELPERS
+================================== */
+
+function formatBytes(bytes){
+
+  if(bytes === 0)
+    return "0 Bytes";
+
+
+  const sizes =
+    [
+      "Bytes",
+      "KB",
+      "MB",
+      "GB"
+    ];
+
+
+  const i =
+    Math.floor(
+      Math.log(bytes) /
+      Math.log(1024)
+    );
+
+
+  return (
+    parseFloat(
+      (
+        bytes /
+        Math.pow(
+          1024,
+          i
+        )
+      ).toFixed(2)
+    )
+    +
+    " "
+    +
+    sizes[i]
+  );
+
+}
+
+
+function escapeHTML(text){
+
+  const div =
+    document.createElement(
+      "div"
+    );
+
+
+  div.textContent =
+    text;
+
+
+  return div.innerHTML;
+
+}
+
+
+
+/* ==================================
+   INITIAL TOOL
+================================== */
+
+selectTool(
+  "image-pdf"
+);
+
+</script>
+
+</body>
+</html>
